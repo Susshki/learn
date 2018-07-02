@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>child5jdk</artifactId>
+  <packaging>jar</packaging>
+
+  <name>child5jdk</name>
+  <url>http://maven.apache.org</url>
+
+	<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>					
+				</plugin>
+			</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>output</id><!-- profile name -->
+			<activation>
+				<jdk>1.7</jdk><!-- <jdk>[1.5,1.8]</jdk> -->
+			</activation>
+			<build> <!--  this code will be activated only when the file exist in the path -->
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>com.sushma.maven.profiles.child5jdk.App</mainClass>
+						<arguments>
+							<argument>Uses jdk 1.7</argument>
+						</arguments>
+					</configuration>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+  <parent>
+  	<groupId>com.sushma.maven.profiles</groupId>
+  	<artifactId>parnet</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+</project>

@@ -1,0 +1,15 @@
+package org.module1;
+
+import org.module2.App;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	System.out.println("Random Num is :"+App.randomNumberGen());
+    }
+}

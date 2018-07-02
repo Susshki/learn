@@ -1,0 +1,13 @@
+package org.module2;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void add(int 1, int b )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

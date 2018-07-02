@@ -1,0 +1,13 @@
+package org.module2;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static double randomNumberGen(int a, int b )
+    {
+        return Math.random();
+    }
+}

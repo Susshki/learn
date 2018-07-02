@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>child3withprofiles2</artifactId>
+  <packaging>jar</packaging>
+
+  <name>child3withprofiles2</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+	<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>					
+				</plugin>
+			</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>output</id><!-- profile name -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>com.sushma.maven.profiles.chidl1.App</mainClass>
+					</configuration>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>output2</id>
+			<build>
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>com.sushma.maven.profiles.child3withprofiles2.App</mainClass>
+					</configuration>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	
+	
+  <parent>
+  	<groupId>com.sushma.maven.profiles</groupId>
+  	<artifactId>parnet</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+</project>

@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>child4fileexists</artifactId>
+  <packaging>jar</packaging>
+
+  <name>child4fileexists</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<file.example.path>C:\Users\End User\Desktop\automationnotes.txt</file.example.path>
+  </properties>
+
+	<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>					
+				</plugin>
+			</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>output</id><!-- profile name -->
+			<activation>
+				<file>
+					<exists>${file.example.path}</exists>
+				</file>
+			</activation>
+			<build> <!--  this code will be activated only when the file exist in the path -->
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>com.sushma.maven.profiles.child4fileexists.App</mainClass>
+					</configuration>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>output</id><!-- profile name -->
+			<activation>
+				<file>
+					<exists>${file.example.path}</exists>
+				</file>
+			</activation>
+			<build> <!--  this code will be activated only when the file exist in the path -->
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>com.sushma.maven.profiles.child4fileexists.App</mainClass>
+					</configuration>
+				</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+
+
+  <parent>
+  	<groupId>com.sushma.maven.profiles</groupId>
+  	<artifactId>parnet</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+</project>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;child1profileintro/src/main/java/com/sushma/maven/profiles/chidl1&apos; to &apos;child1&apos;" description="Rename resource &apos;chidl1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/sushma/maven/profiles/chidl1" name="child1" stamp="1530236615436" updateReferences="true"/>
+</session>

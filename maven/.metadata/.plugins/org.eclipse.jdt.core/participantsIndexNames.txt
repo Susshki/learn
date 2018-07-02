@@ -1,0 +1,5 @@
+INDEX VERSION 1.130
+C:\Sushma\Workspace\maven\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2175430915.index
+\mvneclipsewebproj\src\main\resources
+C:\Sushma\Workspace\maven\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2143048859.index
+\mvncmdlinewebappproj\src\main\resources
