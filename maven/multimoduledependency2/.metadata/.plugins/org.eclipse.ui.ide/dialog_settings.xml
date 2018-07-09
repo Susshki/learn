@@ -6,4 +6,8 @@
 		<item value="C:\Sushma\Workspace\maven\multimoduledependency2"/>
 		<item value="C:\Sushma\Workspace\maven"/>
 	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="330" key="DIALOG_X_ORIGIN"/>
+		<item value="518" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

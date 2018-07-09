@@ -1,3 +1,4 @@
 activeuserprofiles=EndUser-PC;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=End User
+useridperkey=EndUser-PC.Local\=End User;
