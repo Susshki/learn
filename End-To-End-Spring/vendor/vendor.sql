@@ -1,0 +1,21 @@
+use mydb2;
+
+DROP TABLE VENDOR;
+
+create table vendor(
+VENDOR_ID int PRIMARY KEY,
+VENDOR_CODE varchar(20),
+VENDOR_NAME varchar(30),
+VENDOR_TYPE varchar(20),
+VENDOR_EMAIL varchar(30),
+VENDOR_PHONE varchar(10),
+VENDOR_ADDR varchar(40)
+);
+
+SELECT * from VENDOR;
+
+DELETE FROM VENDOR;
+
+truncate VENDOR;
+
+select VENDOR_TYPE, COUNT(VENDOR_TYPE) from VENDOR GROUP BY VENDOR_TYPE
